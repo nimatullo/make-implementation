@@ -1,0 +1,43 @@
+eggs_benedict: hollandaise_sauce poached_eggs english_muffin canadian_bacon
+  assemble muffin eggs bacon
+  pour_on sauce
+  serve guests
+
+hollandaise_sauce: butter egg_yolks lime_juice cream salt pepper
+  melt butter
+  beat yolks
+  add juice cream salt pepper
+  cook mixture
+  
+poached_eggs: eggs
+  boil water | reduce heat to simmer | cook eggs | remove eggs from water
+
+english_muffin: get_gas
+  buy muffins from store
+
+canadian_bacon: get_gas
+  buy bacon from store
+
+egg_yolks: eggs
+  separate yolks from eggs > tmp/yolks
+
+eggs: get_gas
+  buy eggs from store
+
+butter: cream
+  churn cream into butter
+
+lime_juice:
+  buy juice from store
+
+cream:
+  milk cow
+  skim cream from milk
+
+salt:
+  buy salt from store
+
+pepper:
+  buy pepper from store
+
+get_gas:

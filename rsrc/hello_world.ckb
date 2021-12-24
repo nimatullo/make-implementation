@@ -1,0 +1,19 @@
+say_hello: hello_world
+  tmp/hello_world
+  rm -f tmp/*
+
+hello_world: main.o print.o
+  cc -o tmp/hello_world tmp/main.o tmp/print.o
+  rm -f tmp/main.c tmp/print.c
+
+main.o: main.c
+  cc -c -o tmp/main.o tmp/main.c
+
+print.o: print.c
+  cc -c -o tmp/print.o tmp/print.c
+
+main.c:
+  echo int print(); int main() { print(); } > tmp/main.c
+
+print.c:
+  echo int puts(); void print() { puts("Hello world!\\n"); } > tmp/print.c
